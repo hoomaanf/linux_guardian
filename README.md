@@ -18,7 +18,7 @@ Linux Guardian automatically detects your distribution, package manager, and des
 
 ---
 
-## ✅ What's Implemented
+## ✨ Features
 
 | Area | Description |
 |------|-------------|
@@ -31,6 +31,21 @@ Linux Guardian automatically detects your distribution, package manager, and des
 | **Process Manager** (`app/ui/process_tab.py`) | Live tree view, CPU/mem/status/nice, kill/terminate/suspend/resume, search filter |
 | **Storage Analyzer** (`app/ui/storage_tab.py`) | Largest files/folders under any chosen directory |
 | **Theming** (`app/ui/theme.py`) | Light / Dark / Auto (follows system palette), accent color support |
+
+---
+
+## 🗺️ Roadmap
+
+- SSD/NVMe SMART health, wear level, TRIM status
+- Battery health + vendor-specific features (ThinkPad/Dell/ASUS/HP/Framework)
+- Kernel parameter tuning, IO scheduler, NUMA, Huge Pages controls
+- Boot time analysis / systemd-analyze integration
+- Duplicate file/media/ISO detection via content hashing
+- Interactive treemap visualization
+- Plugin system
+- HTML/PDF/CSV/Markdown report export
+- Localization (i18n)
+- Snap/Nix package manager adapters
 
 ---
 
@@ -61,7 +76,22 @@ tests/        Unit tests (cleaner safety behavior, distro parsing)
 
 ---
 
-## 🚀 Setup
+## 🚀 Quick Install
+
+```bash
+# Download and run installer
+curl -fsSL https://raw.githubusercontent.com/hoomaanf/linux_guardian/main/install.sh | bash
+
+# Or clone and install
+git clone https://github.com/hoomaanf/linux_guardian.git
+cd linux_guardian
+chmod +x install.sh
+./install.sh
+```
+
+---
+
+## 🔧 Manual Setup
 
 ```bash
 # Clone the repository
@@ -77,6 +107,20 @@ pip install -r requirements.txt
 
 # Run the application
 python3 main.py
+```
+
+---
+
+## 🗑️ Uninstall
+
+```bash
+# Download and run uninstaller
+curl -fsSL https://raw.githubusercontent.com/hoomaanf/linux_guardian/main/uninstall.sh | bash
+
+# Or if you have the source
+cd linux_guardian
+chmod +x uninstall.sh
+./uninstall.sh
 ```
 
 ---
