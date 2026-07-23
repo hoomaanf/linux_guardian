@@ -1,0 +1,22 @@
+pkgbase = linux-guardian
+	pkgdesc = A cross-distribution Linux system optimization and maintenance tool built with Python and PyQt6
+	pkgver = 0.r3.g8c4d7f2
+	pkgrel = 1
+	url = https://github.com/hoomaanf/linux_guardian
+	install = linux-guardian.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = python-pyqt6
+	depends = python-psutil
+	depends = python-requests
+	depends = python-importlib-metadata
+	depends = python-platformdirs
+	depends = git
+	provides = linux-guardian
+	conflicts = linux-guardian
+	source = git+https://github.com/hoomaanf/linux_guardian.git
+	sha256sums = SKIP
+
+pkgname = linux-guardian

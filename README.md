@@ -18,6 +18,38 @@ Linux Guardian automatically detects your distribution, package manager, and des
 
 ---
 
+## 📦 Installation
+
+### Arch Linux (AUR)
+
+```bash
+# With yay (recommended)
+yay -S linux-guardian
+
+# With paru
+paru -S linux-guardian
+
+# Or manually
+git clone https://aur.archlinux.org/linux-guardian.git
+cd linux-guardian
+makepkg -si
+```
+
+### Other Linux Distributions
+
+```bash
+# Download and run installer
+curl -fsSL https://raw.githubusercontent.com/hoomaanf/linux_guardian/main/install.sh | bash
+
+# Or clone and install
+git clone https://github.com/hoomaanf/linux_guardian.git
+cd linux_guardian
+chmod +x install.sh
+./install.sh
+```
+
+---
+
 ## ✨ Features
 
 | Area | Description |
@@ -76,21 +108,6 @@ tests/        Unit tests (cleaner safety behavior, distro parsing)
 
 ---
 
-## 🚀 Quick Install
-
-```bash
-# Download and run installer
-curl -fsSL https://raw.githubusercontent.com/hoomaanf/linux_guardian/main/install.sh | bash
-
-# Or clone and install
-git clone https://github.com/hoomaanf/linux_guardian.git
-cd linux_guardian
-chmod +x install.sh
-./install.sh
-```
-
----
-
 ## 🔧 Manual Setup
 
 ```bash
@@ -114,7 +131,10 @@ python3 main.py
 ## 🗑️ Uninstall
 
 ```bash
-# Download and run uninstaller
+# For Arch Linux (AUR)
+sudo pacman -R linux-guardian
+
+# For other distros (if installed via install.sh)
 curl -fsSL https://raw.githubusercontent.com/hoomaanf/linux_guardian/main/uninstall.sh | bash
 
 # Or if you have the source
@@ -158,7 +178,7 @@ pyinstaller --name linux-guardian --onefile --windowed main.py
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="screenshot/main-window.png" alt="Linux Guardian Main Window" width="800">
+  <img src="screenshots/main-window.png" alt="Linux Guardian Main Window" width="800">
   <br>
   <em>Main Dashboard</em>
 </div>
